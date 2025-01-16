@@ -12,8 +12,13 @@ def verificar_admin():
         return ctypes.windll.shell32.IsUserAnAdmin()
     except:
         return False
-    
-    print(teste)
+
+# Verificar se o programa esta rodando como administrador
+def verificar_admin():
+    try:
+        return ctypes.windll.shell32.IsUserAnAdmin()
+    except:
+        return False
 
 # Funcao para limpar pastas temporarias
 def limpar_temporarios(log_terminal):
