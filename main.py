@@ -13,13 +13,6 @@ def verificar_admin():
     except:
         return False
 
-# Verificar se o programa esta rodando como administrador
-def verificar_admin():
-    try:
-        return ctypes.windll.shell32.IsUserAnAdmin()
-    except:
-        return False
-
 # Funcao para limpar pastas temporarias
 def limpar_temporarios(log_terminal):
     try:
@@ -31,6 +24,9 @@ def limpar_temporarios(log_terminal):
             os.getenv("WINDIR") + "\\Temp",  # C:\Windows\Temp
             os.getenv("WINDIR") + "\\Prefetch"  # C:\Windows\Prefetch
         ]
+
+
+        print('teste')
 
         for temp_dir in temp_dirs:
             if os.path.exists(temp_dir):
