@@ -25,9 +25,6 @@ def limpar_temporarios(log_terminal):
             os.getenv("WINDIR") + "\\Prefetch"  # C:\Windows\Prefetch
         ]
 
-
-        print('teste')
-
         for temp_dir in temp_dirs:
             if os.path.exists(temp_dir):
                 log_terminal.insert(tk.END, f"Limpando: {temp_dir}\n")
